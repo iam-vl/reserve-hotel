@@ -2,7 +2,8 @@ package types
 
 type User struct {
 	// omitempty: don't show publicly
-	ID        string `bson:"_id" json:"id,omitempty"`
+	// both in json and in mongo
+	ID        string `bson:"_id,omitempty" json:"id,omitempty"`
 	FirstName string `bson:"firstName" json:"firstName"`
 	LastName  string `bson: "lastName" json:"lastName"`
 }
